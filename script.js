@@ -63,14 +63,14 @@ const moduloValue = (nb) => nb % 5;
 const isDivisibleBy5 =
   moduloValue(n1) + moduloValue(n2) + moduloValue(n3) + moduloValue(n4) === 0;
 yesOrNo = isDivisibleBy5 ? "Yes" : "No";
-console.log(`\nAre all numbers divisible by 5?  ${yesOrNo}`);
+console.log(`\n- Are all numbers divisible by 5?  ${yesOrNo}`);
 
 // Check if the first number is larger than the last. Cache the result in a variable.
 
 const isFirstNumberLargerThanLastNumber = n1 > n4;
 yesOrNo = isFirstNumberLargerThanLastNumber ? "Yes" : "No";
 console.log(
-  `\nIs the first number ${n1} larger than the last ${n4}? ${yesOrNo}`
+  `\n- Is the first number ${n1} larger than the last ${n4}? ${yesOrNo}`
 );
 
 // Accomplish the following arithmetic chain:
@@ -78,26 +78,26 @@ console.log(
 
 const subtractResult = n2 - n1;
 console.log(
-  `\nSubtraction of the first number ${n1} from the second number ${n2} is: ${subtractResult}`
+  `\n- Subtraction of the first number ${n1} from the second number ${n2} is: ${subtractResult}`
 );
 
 // * Multiply the result by the third number.
 
 const multiplyResult = subtractResult * n3;
 console.log(
-  `\nMultiply the result ${subtractResult} by the third number ${n3} is: ${multiplyResult}`
+  `\n- Multiply the result ${subtractResult} by the third number ${n3} is: ${multiplyResult}`
 );
 
 // * Find the remainder of dividing the result by the fourth number.
 
 const remainder = multiplyResult % n4;
-console.log(`\nthe remainder of ${multiplyResult}/${n4} is: ${remainder}`);
+console.log(`\n- The remainder of ${multiplyResult}/${n4} is: ${remainder}`);
 
 // Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
 
 const isLessThan25 = n1 < 25 || n2 < 25 || n3 < 25 || n4 < 25;
 yesOrNo = isLessThan25 ? "Yes" : "No";
-console.log(`\nAre all numbers less than 25? ${yesOrNo}`);
+console.log(`\n- Are all numbers less than 25? ${yesOrNo}`);
 
 //------------------------- PART2 ----------------------------------
 console.log(
@@ -155,7 +155,7 @@ const totalSpeedPerHour = speedPerHour_55 + speedPerHour_60 + speedPerHour_75;
 // How many gallons of fuel will you need for the entire trip?
 const gallonsNeeded = totalTripDistance / totalMilesPerGallon;
 console.log(
-  `\nGallons of fuel needed for the entire trip are: ${gallonsNeeded.toFixed(
+  `\n- Gallons of fuel needed for the entire trip are: ${gallonsNeeded.toFixed(
     2
   )}`
 );
@@ -165,13 +165,15 @@ const fuelExpense = gallonsNeeded * fuelPerGallonPrice;
 const isBudgetEnough = fuelExpense <= budget ? "Yes" : "No";
 
 console.log(
-  `\nWill your budget be enough to cover the fuel expense?: ${isBudgetEnough}`
+  `\n- Will your budget be enough to cover the fuel expense?: ${isBudgetEnough}`
 );
 
 // How long will the trip take, in hours?
 const tripDuration = totalTripDistance / totalSpeedPerHour;
 console.log(
-  `\nHow long will the trip take, in hours?: ${tripDuration.toFixed(2)} Hour(s)`
+  `\n- How long will the trip take, in hours?: ${tripDuration.toFixed(
+    2
+  )} Hour(s)`
 );
 
 // Compare the results when traveling at an average of 55, 60, and 75 miles per hour. Which makes the most sense for the trip?
@@ -217,7 +219,7 @@ dataForTable.Three_Case_75 = {
   "Trip Duration (hours)": tripDuration_75.toFixed(2),
 };
 console.log(
-  `\nCompare the results when traveling at an average of 55, 60, and 75 miles per hour. Which makes the most sense for the trip?`
+  `\n- Compare the results when traveling at an average of 55, 60, and 75 miles per hour. Which makes the most sense for the trip?`
 );
 console.log(`\n--------------------------- TABLE ----------------------------`);
 console.table(dataForTable);
