@@ -53,7 +53,7 @@ const dontDoThis =
 
 //------------------------- PART 1 --------------------------------
 console.log(
-  `\n------------------------- PART 1 --------------------------------`
+  `\n🖥️------------------------- PART 1 -------------------------------- ✅`
 );
 let yesOrNo;
 
@@ -101,7 +101,7 @@ console.log(`\n- Are all numbers less than 25? ${yesOrNo}`);
 
 //------------------------- PART2 ----------------------------------
 console.log(
-  `\n------------------------- PART 2 --------------------------------`
+  `\n🖥️------------------------- PART 2 -------------------------------- ✅`
 );
 
 /**
@@ -221,5 +221,77 @@ dataForTable.Three_Case_75 = {
 console.log(
   `\n- Compare the results when traveling at an average of 55, 60, and 75 miles per hour. Which makes the most sense for the trip?`
 );
-console.log(`\n--------------------------- TABLE ----------------------------`);
+console.log(
+  `\n🖥️ --------------------------- TABLE ---------------------------- ✅`
+);
 console.table(dataForTable);
+
+// Class solution
+
+// Declaring Variables
+// Arithmetic (Math) Operators
+// Logical Operators - && || !
+// Compairson Operators
+
+// What do we know?
+// Total distance = 1500
+// Fuel Eff
+//  // at 55 mph - 30mpg
+//  // at 60 mph - 28mpg
+//  // at 75 mph - 23mpg
+//  // budget = 175
+// Avg Fuel Cost = 3 per gallon
+
+// What can we infer?
+
+//  What do I need to find?
+// // gallons needed for trip?
+// // // fuel effeciency
+// // // totalDistance
+//  //  // return: number, gallonsPerTrip
+
+// Is our budget enough?
+//  //  // fuelCostPerGallon
+//  //  // gallons needed (from first question)
+//  //  // totalBudget
+//  //  //  //  return: boolean, yes its enough or no its not enough
+
+// How long will is take in hours?
+//  // speed
+//  // total distance
+//  //  // return: number, hours each trip will take.
+
+// Variables
+
+// Constant Variables
+const totalDistance = 1500;
+const _budget = 175;
+const costPerGallon = 3;
+
+// Other Variables
+let speed = 55;
+let mpg = 30;
+
+// Find Total Fuel for Trip
+const gallonsPerTrip = totalDistance / mpg;
+
+console.log(
+  `At ${speed}mph, you will need ${gallonsPerTrip} gallons of fuel, to travel ${totalDistance}`
+);
+
+// Is my budget enough?
+const costPerTrip = gallonsPerTrip * costPerGallon; //Calculates total cost
+console.log(
+  `With a fuel efficiency of ${mpg}mpg, it would take ${gallonsPerTrip} gallons, which costs, $${costPerTrip}.`
+);
+
+const _isBudgetEnough = _budget >= costPerTrip; // compare to budget to let us know if we can afford
+console.log(
+  `With a budget of $${_budget}, it is ${_isBudgetEnough} that we can afford this trip. At that speed.`
+);
+
+// How long would this trip take?
+const timeOfTrip = totalDistance / speed;
+console.log(
+  `At ${speed}mph it would take ${timeOfTrip}hrs to complete ${totalDistance} miles`
+);
